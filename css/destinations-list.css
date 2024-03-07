@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --main-color: rgb(255, 0, 0);
+    --light-white: rgb(255, 255, 255);
+    --light-black: rgba(0, 0, 0, .3);
+    --light-bg: rgba(255, 255, 255, .1);
+    --white: #fff;
+    --black: #000;
+}
+
+* {
+    font-family: 'Comfortaa', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    scrollbar-color: var(--main-color) var(--black);
+    scrollbar-width: thin;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+*::selection {
+    background-color: var(--main-color);
+    color: var(--black);
+}
+
+*::-webkit-scrollbar {
+    height: .5rem;
+    width: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+
+
+
+
+body {
+    background-color: var(--black);
+    overflow-x: hidden;
+    /* padding-bottom: 7rem; */
+}
+
+.container {
+    padding-top: 10rem;
+}
+
+section {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 4rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 7rem;
+    color: var(--white);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.btn {
+    display: block;
+    border-radius: .5rem;
+    padding: 1.2rem 3rem;
+    background: var(--main-color);
+    color: var(--black);
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    transition: .2s linear;
+}
+
+.btn:hover {
+    background: var(--black);
+    color: var(--white);
+}
+
+
+
+
+.about .grid-destination {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 110rem);
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    margin-top: 4rem;
+}
+
+.about .grid-destination .box {
+    background-color: var(--light-bg);
+    padding: 10rem;
+    text-align: center;
+    backdrop-filter: blur(.4rem);
+    border-radius: .5rem;
+
+
+}
+
+.about .grid-destination .box img {
+    height: 30rem;
+    width: auto;
+    transition: .1s linear;
+}
+
+.about .grid-destination .box h3 {
+    padding: 3rem 0;
+    font-size: 2rem;
+    color: var(--white);
+    justify-content: center;
+}
+
+.about .grid-destination .box p {
+    line-height: 2;
+    font-size: 1.5rem;
+    color: var(--light-white);
+    text-align: justify;
+}
+
+.about .grid-destination .box:hover {
+    background-color: var(--light-black);
+}
+
+.about .grid-destination .box:hover img {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+/* media queries  */
+
+@media (max-width:991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    .heading {
+        font-size: 5rem;
+        margin-bottom: 3rem;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .header .flex {
+        position: relative;
+    }
+
+    .header .flex .navbar {
+        position: absolute;
+        top: 100%;
+        left: 2rem;
+        right: 2rem;
+        background-color: var(--light-black);
+        backdrop-filter: blur(.4rem);
+        border-radius: .5rem;
+        transform: scale(0);
+        transform-origin: top right;
+        padding: 1.5rem .5rem;
+    }
+
+    .header .flex .navbar.active {
+        transform: scale(1);
+        transition: .2s linear;
+    }
+
+    .header .flex .navbar a {
+        display: block;
+        padding: 1rem;
+        margin: .5rem 1rem;
+        color: var(--white);
+        border-radius: .5rem;
+    }
+
+    .header .flex .navbar a:hover {
+        background-color: var(--light-bg);
+    }
+
+    .heading {
+        font-size: 5rem;
+    }
+
+    .about .grid-destination {
+        grid-template-columns: fit-content(100%);
+
+
+    }
+
+
+
+
+    @media (max-width:450px) {
+
+
+        html {
+            font-size: 50%;
+        }
+
+        .heading {
+            font-size: 4rem;
+        }
+
+    }
+}
